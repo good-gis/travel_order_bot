@@ -1,5 +1,5 @@
 {
-  "name": "iglushkov/TravelOrderBot",
+  "name": "iglushkov/travel_order_bot",
   "description": "Bot for order ticket",
   "license": "MIT",
   "authors": [
@@ -9,5 +9,16 @@
     }
   ],
   "require": {
+    "telegram-bot/api": "2.3.*",
+    "vlucas/phpdotenv": "5.2.*"
+  }
+  ,
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
   }
 }
