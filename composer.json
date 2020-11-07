@@ -1,0 +1,13 @@
+{
+  "name": "iglushkov/TravelOrderBot",
+  "description": "Bot for order ticket",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ivan Gluskov",
+      "email": "glushkov1997@icloud.com"
+    }
+  ],
+  "require": {
+  }
+}
