@@ -10,7 +10,9 @@
   ],
   "require": {
     "telegram-bot/api": "2.3.*",
-    "vlucas/phpdotenv": "5.2.*"
+    "vlucas/phpdotenv": "5.2.*",
+    "monolog/monolog": "^2.1",
+    "guzzlehttp/guzzle": "^7.2"
   }
   ,
   "require-dev": {

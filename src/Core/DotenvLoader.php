@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Configs;
+namespace App\Core;
 
 use Dotenv\Dotenv;
 

@@ -8,7 +8,6 @@ abstract class BaseController
     {
         ob_start();
         include $_SERVER['DOCUMENT_ROOT'] . '/src/Views/' . $view;
-        $view = ob_get_clean();
-        return $view;
+        return ob_get_clean();
     }
 }
