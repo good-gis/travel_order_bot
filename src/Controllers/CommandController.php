@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\MonologLogger;
+use App\Services\FindTicketService;
 use Monolog\Logger;
 use TelegramBot\Api\Client;
 use TelegramBot\Api\InvalidJsonException;
@@ -29,7 +30,7 @@ class CommandController extends BaseController
         $this->start();
         $this->ping();
         $this->help();
-        $this->orderTicket();
+        $this->findTicket();
         $this->text();
 
         $this->bot->run();
@@ -77,17 +78,16 @@ class CommandController extends BaseController
         );
     }
 
-    private function orderTicket(): void
+    private function findTicket(): void
     {
         $bot = $this->bot;
         $this->logger->info('Command orderTicket');
 
         $bot->command(
-            'order_ticket',
+            'find_ticket',
             function ($message) use ($bot) {
-                $answer = $this->render('help.php');
-                $bot->sendMessage($message->getChat()->getId(), $answer);
-
+                $bot->sendMessage($message->getChat()->getId(), $this->render('help.php'));
+                (new FindTicketService())->findTicket($bot);
             }
         );
 
